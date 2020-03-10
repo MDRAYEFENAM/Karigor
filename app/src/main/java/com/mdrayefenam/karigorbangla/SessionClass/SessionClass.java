@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import com.mdrayefenam.karigorbangla.Activity.LoginActivity;
+import com.mdrayefenam.karigorbangla.Activity.MainActivity;
+import com.mdrayefenam.karigorbangla.Activity.MainServiceSelectPage;
 import com.mdrayefenam.karigorbangla.Model.SessionData;
 import com.mdrayefenam.karigorbangla.Activity.LoginActivity;
 import com.mdrayefenam.karigorbangla.Model.SessionData;
@@ -59,6 +61,6 @@ public class SessionClass {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
-        mCtx.startActivity(new Intent(mCtx, LoginActivity.class));
+        mCtx.startActivity(new Intent(mCtx, MainServiceSelectPage.class));
     }
 }

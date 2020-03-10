@@ -39,7 +39,7 @@ public class SnapScreen extends AppCompatActivity {
                 @Override
                 public void run() {
 
-                    Intent intent = new Intent(SnapScreen.this, LoginActivity.class);
+                    Intent intent = new Intent(SnapScreen.this, MainServiceSelectPage.class);
                     startActivity(intent);
                     finish();
 

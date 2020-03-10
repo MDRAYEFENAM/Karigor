@@ -13,6 +13,7 @@ public class RetrofitClient {
     private Retrofit retrofit;
     private ApiInterface apiInterface;
     private static final String BASE_URL="https://karigorbangla.000webhostapp.com/api/";
+    //private static final String BASE_URL="https://karigor.againwish.com/api/";
     private static RetrofitClient retrofitClient;
 
 
@@ -34,7 +35,6 @@ public class RetrofitClient {
                 return chain.proceed(newRequest);
             }
         }).build();
-
 
 
         retrofit = new Retrofit.Builder()

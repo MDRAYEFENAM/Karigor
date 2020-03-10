@@ -8,8 +8,8 @@ import android.widget.FrameLayout;
 
 
 import com.mdrayefenam.karigorbangla.Fragment.Home;
-import com.mdrayefenam.karigorbangla.Fragment.NewsFeed;
-import com.mdrayefenam.karigorbangla.Fragment.Search;
+import com.mdrayefenam.karigorbangla.Fragment.ProfileFragment;
+import com.mdrayefenam.karigorbangla.Fragment.Notification;
 import com.mdrayefenam.karigorbangla.R;
 import com.mdrayefenam.karigorbangla.SessionClass.SessionClass;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
     FrameLayout fragmentContiner;
 
     private Home home;
-    private NewsFeed newsFeed;
-    private Search search;
+    private ProfileFragment profile;
+    private Notification notification;
 
     private Menu action;
 
@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentContiner = findViewById(R.id.fragmentContiner);
 
         home = new Home();
-        newsFeed = new NewsFeed();
-        search = new Search();
+        profile = new ProfileFragment();
+        notification = new Notification();
 
         ((AppCompatActivity) MainActivity.this).getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContiner, new Home()).commit();
 
@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.news_feed_item:
-                        InitialFragment(newsFeed);
+                        InitialFragment(profile);
                         return true;
 
                     case R.id.search_item:
-                        InitialFragment(search);
+                        InitialFragment(notification);
                         return true;
 
                 }
@@ -100,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.menu_logout:
 
-                /*new LoginRegisterClass(Profile.this).removeEmail();
-                Intent intent = new Intent( Profile.this,loginactivity.class );
+                /*new LoginRegisterClass(ProfileFragment.this).removeEmail();
+                Intent intent = new Intent( ProfileFragment.this,loginactivity.class );
                 startActivity( intent );
                 finish();*/
 

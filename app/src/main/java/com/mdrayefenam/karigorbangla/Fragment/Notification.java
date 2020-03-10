@@ -14,10 +14,10 @@ import com.mdrayefenam.karigorbangla.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NewsFeed extends Fragment {
+public class Notification extends Fragment {
 
 
-    public NewsFeed() {
+    public Notification() {
         // Required empty public constructor
     }
 
@@ -26,7 +26,7 @@ public class NewsFeed extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate( R.layout.fragment_news_feed, container, false );
+        return inflater.inflate( R.layout.fragment_notification, container, false );
     }
 
 }

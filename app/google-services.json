@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "352785769043",
+    "firebase_url": "https://karigorbangla-f5bc0.firebaseio.com",
+    "project_id": "karigorbangla-f5bc0",
+    "storage_bucket": "karigorbangla-f5bc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352785769043:android:d64d6b5069a67744f59ca6",
+        "android_client_info": {
+          "package_name": "com.mdrayefenam.karigorbangla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352785769043-jp6lvgbuucp89uc3ek0ip98moqml4m9u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mdrayefenam.karigorbangla",
+            "certificate_hash": "8c45b5a6ff0ad79b3ea94642b296a3405df795e9"
+          }
+        },
+        {
+          "client_id": "352785769043-hk0vnflolr53r808sbsreg8dqqu7k955.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIJgqt6AZnDQHKULrYFSbuZSsjJx4TF_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352785769043-hk0vnflolr53r808sbsreg8dqqu7k955.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

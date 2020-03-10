@@ -3,6 +3,11 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="item">Select Category</string>
+    <string name="item1">Location</string>
+    <string name="item2">Number of Workers</string>
+
+
     <!--SignUp-->
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -25,7 +30,7 @@
     <string name="garage">TV Servicing</string>
     <string name="warehouse">Washing Machine</string>
 
-    <!--Profile Fragment-->
+    <!--ProfileFragment Fragment-->
     <string name="user_name">Name : User Name</string>
     <string name="user_email">Email : email@email.com</string>
     <string name="user_address">Address : Bangladesh</string>
@@ -37,9 +42,22 @@
     <string name="number_fild_text">You must be enter your 11 digit phone number.Then tap next to verify your account with your phone number . You don’t need to manualy enter verification code if the number install in this phone. </string>
 
     <string-array name="renters_type">
-        <item>Family</item>
-        <item>Bachelor</item>
-        <item>Business</item>
+
+        <item>Appliances Cleaning</item>
+        <item>Furniture Cleaning</item>
+        <item>Water Tank Cleaning</item>
+        <item>Carpentry Service</item>
+        <item>Computer Service</item>
+        <item>Electrical Service</item>
+        <item>Plumbing Service</item>
+        <item>AC Service</item>
+        <item>Fridge Service</item>
+        <item>Geyser Service</item>
+        <item>Oven Service</item>
+        <item>TV Servicing</item>
+        <item>Washing Machine Service</item>
+        <item>Shifting</item>
+        <item>Painting</item>
     </string-array>
 
     <string-array name="category_type">
@@ -79,4 +97,15 @@
         <item>pm</item>
         <item>am</item>
     </string-array>
+
+
+    <!--Location Tracking Activity-->
+    <string name="tracking_enabled_notif">Tracking is currently enabled. Tap to cancel.</string>
+    <string name="test_email">test@test.com</string>
+    <string name="test_password">testpassword</string>
+    <string name="firebase_path">location</string>
+
+    <!--Location Tracking API-KEY-->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBcPzksYXPPfaKycl0O1EX2J4iH4nVHvaY</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
