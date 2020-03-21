@@ -34,7 +34,7 @@
     <string name="user_name">Name : User Name</string>
     <string name="user_email">Email : email@email.com</string>
     <string name="user_address">Address : Bangladesh</string>
-    <string name="edite_profle">Edite Profile</string>
+    <string name="edite_profle">Edit Profile</string>
 
     <!--Number Authentication Activity-->
     <string name="emter_number">Enter your mobile number</string>
@@ -108,4 +108,15 @@
     <!--Location Tracking API-KEY-->
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBcPzksYXPPfaKycl0O1EX2J4iH4nVHvaY</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_provider_location">Map</string>
+    <string name="title_activity_taker_location">Map</string>
+    <string name="title_activity_provider_own_location">Map</string>
+
+
+
+    <string name="Karigor">RequestSubmit Application</string>
+
+    <string name="ok">ok</string>
+    <string name="yes">Accept</string>
+    <string name="No">Decline</string>
 </resources>

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorMain"
-    tools:context=".Activity.MapsActivity">
+    tools:context=".Activity.Taker.TakerOwnLocationActivity">
 
 <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
@@ -16,10 +16,10 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity" />-->
+    tools:context=".TakerOwnLocationActivity" />-->
 
     <LinearLayout
-        android:id="@+id/userInformation"
+        android:id="@+id/ownmap"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -47,6 +47,8 @@
 
     </LinearLayout>
 
+
+
         <Button
             android:id="@+id/hireworker"
             android:layout_width="match_parent"
@@ -55,9 +57,10 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_gravity="center"
+            android:textAllCaps="false"
             android:textColor="@color/colorWhite"
             android:background="@drawable/btnshape"
-            android:textSize="20sp"/>
+            android:textSize="18sp"/>
     </LinearLayout>
 
 </RelativeLayout>

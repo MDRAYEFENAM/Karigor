@@ -1,4 +1,4 @@
-package com.mdrayefenam.karigorbangla.Activity;
+package com.mdrayefenam.karigorbangla.Activity.Taker;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -16,16 +15,13 @@ import com.mdrayefenam.karigorbangla.R;
 import com.mdrayefenam.karigorbangla.RegisterModel.RegisterResponse;
 import com.mdrayefenam.karigorbangla.SessionClass.SessionClass;
 import com.mdrayefenam.karigorbangla.Network.RetrofitClient;
-import com.mdrayefenam.karigorbangla.Network.RetrofitClient;
-import com.mdrayefenam.karigorbangla.R;
-import com.mdrayefenam.karigorbangla.RegisterModel.RegisterResponse;
 
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SingUp extends AppCompatActivity {
+public class TakerSignUp extends AppCompatActivity {
 
     EditText userName,userEmail,Password,confirm_password;
     CheckBox check_box;
@@ -80,7 +76,7 @@ public class SingUp extends AppCompatActivity {
                     sign_up.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.GONE);
                 }else if (!password.equals(ConfirmPassword)){
-                    Toast.makeText( SingUp.this, "Password not match!", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( TakerSignUp.this, "Password not match!", Toast.LENGTH_SHORT ).show();
                     sign_up.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.GONE);
                 }if(!check_box.isChecked())//checked then
@@ -90,7 +86,7 @@ public class SingUp extends AppCompatActivity {
                     progressBar.setVisibility(View.GONE);
                 }else {
 
-                   /* Intent intent = new Intent( SingUp.this, MainActivity.class );
+                   /* Intent intent = new Intent( TakerSignUp.this, TakerHomePage.class );
                     startActivity( intent );
                     finish(); */
 
@@ -135,12 +131,12 @@ public class SingUp extends AppCompatActivity {
 
                         SessionClass.getInstance(getApplicationContext()).userLogin(sessionData);
 
-                        Toast.makeText(SingUp.this, registerResponse.getUserId().toString(), Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(SingUp.this, AccountVerified.class);
+                        Toast.makeText(TakerSignUp.this, registerResponse.getUserId().toString(), Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(TakerSignUp.this, TakerAccountVerified.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(SingUp.this, registerResponse.getStatus(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(TakerSignUp.this, registerResponse.getStatus(), Toast.LENGTH_LONG).show();
                     }
                 }
                 else {
@@ -150,7 +146,7 @@ public class SingUp extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<RegisterResponse> call, Throwable t) {
-                Toast.makeText(SingUp.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(TakerSignUp.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 

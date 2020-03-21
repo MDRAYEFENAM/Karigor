@@ -1,4 +1,4 @@
-package com.mdrayefenam.karigorbangla.Activity;
+package com.mdrayefenam.karigorbangla.Activity.Provider;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,17 +21,19 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LoginActivity extends AppCompatActivity {
+public class ProviderLoginActivity extends AppCompatActivity {
+
 
     EditText login_email, login_password;
     TextView sign_in;
     Button bottomSinUp;
-    private String TAG = "LoginActivity ";
+    private String TAG = "TakerLoginActivity ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_provider_login);
+
 
         login_email = findViewById(R.id.login_email);
         login_password = findViewById(R.id.login_password);
@@ -56,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     doLogin(email, password);
 //                    if (email.equals( "habib") && password.equals( "1234" ) ){
-//                        Intent intent = new Intent( Login.this, MainActivity.class );
+//                        Intent intent = new Intent( Login.this, TakerHomePage.class );
 //                        startActivity( intent );
 //                        finish();
 //                    }else {
@@ -71,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, NumberAuthentication.class);
+                Intent intent = new Intent(ProviderLoginActivity.this, ProviderNumberAuthentication.class);
                 startActivity(intent);
                 finish();
             }
@@ -90,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (loginResponse != null && loginResponse.getStatus() == 1) {
                         Log.e(TAG, "onResponse: " + loginResponse.getToken().getOriginal().getAccessToken());
                         Log.e(TAG, "onResponse: " + loginResponse.getToken().getOriginal().getAccessToken().length());
-                        Toast.makeText(LoginActivity.this, loginResponse.getUserId().toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ProviderLoginActivity.this, loginResponse.getUserId().toString(), Toast.LENGTH_SHORT).show();
 
                         int userID = loginResponse.getUserId();
                         String UserToken = loginResponse.getToken().getOriginal().getAccessToken();
@@ -102,12 +104,12 @@ public class LoginActivity extends AppCompatActivity {
                         SessionClass.getInstance(getApplicationContext()).userLogin(sessionData);
 
 
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent intent = new Intent(ProviderLoginActivity.this, ProviderProfile.class);
                         startActivity(intent);
                         finish();
 
                     } else {
-//                        Toast.makeText(LoginActivity.this, loginResponse.getStatus(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(TakerLoginActivity.this, loginResponse.getStatus(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Log.d(TAG, "onResponse: " + response.code());
@@ -116,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<LoginResponce> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProviderLoginActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -1,4 +1,4 @@
-package com.mdrayefenam.karigorbangla.Activity;
+package com.mdrayefenam.karigorbangla.Activity.Provider;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,8 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.jaredrummler.materialspinner.MaterialSpinner;
+import com.mdrayefenam.karigorbangla.Activity.Taker.TakerAccountVerified;
 import com.mdrayefenam.karigorbangla.Model.SessionData;
 import com.mdrayefenam.karigorbangla.Network.RetrofitClient;
 import com.mdrayefenam.karigorbangla.R;
@@ -87,6 +86,9 @@ public class ProviderSignUp extends AppCompatActivity {
                 String password = Password.getText().toString();
                 String ConfirmPassword = confirm_password.getText().toString();
 
+                Toast.makeText(ProviderSignUp.this, ""+spinnerData, Toast.LENGTH_LONG).show();
+
+
 
                 sign_up.setVisibility(View.GONE);
                 progressBar.setVisibility(View.VISIBLE);
@@ -118,7 +120,7 @@ public class ProviderSignUp extends AppCompatActivity {
                     progressBar.setVisibility(View.GONE);
                 }else {
 
-                   /* Intent intent = new Intent( SingUp.this, MainActivity.class );
+                   /* Intent intent = new Intent( TakerSignUp.this, TakerHomePage.class );
                     startActivity( intent );
                     finish(); */
 
@@ -129,6 +131,9 @@ public class ProviderSignUp extends AppCompatActivity {
     }
 
     private void doRegister(String name,String email,String mobile, String password) {
+
+
+
 
         Call<RegisterResponse> call = RetrofitClient.getInstance().getApiInterface().userRegister(name,email,mobile, password);
         call.enqueue(new Callback<RegisterResponse>() {
@@ -156,7 +161,7 @@ public class ProviderSignUp extends AppCompatActivity {
                         SessionClass.getInstance(getApplicationContext()).userLogin(sessionData);
 
                         Toast.makeText(ProviderSignUp.this, registerResponse.getUserId().toString(), Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(ProviderSignUp.this, AccountVerified.class);
+                        Intent intent = new Intent(ProviderSignUp.this, ProviderAccountVerified.class);
                         startActivity(intent);
                         finish();
                     } else {

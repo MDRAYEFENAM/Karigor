@@ -1,7 +1,8 @@
-package com.mdrayefenam.karigorbangla.Activity;
+package com.mdrayefenam.karigorbangla.Activity.Taker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -9,27 +10,42 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.mdrayefenam.karigorbangla.Activity.Taker.TakerPayment;
 import com.mdrayefenam.karigorbangla.R;
 
-public class StopWatch extends AppCompatActivity {
+public class TakerServiceTimer extends AppCompatActivity {
 
     TextView timer ;
-    Button start, pause, reset;
+ /*   Button start, pause, reset;
     long MillisecondTime, StartTime, TimeBuff, UpdateTime = 0L ;
     Handler handler;
-    int Seconds, Minutes, MilliSeconds ;
+    int Seconds, Minutes, MilliSeconds ;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stop_watch);
+        setContentView(R.layout.activity_taker_service_timer);
+
+
+
+        Button buttonOne = findViewById(R.id.workfinish);
+        buttonOne.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("Button Clicked");
+
+
+                Intent intent = new Intent(getApplicationContext(), TakerPayment.class);
+                startActivity(intent);
+            }
+
+        });
 
         timer = (TextView)findViewById(R.id.tvTimer);
-        start = (Button)findViewById(R.id.btStart);
-        pause = (Button)findViewById(R.id.btPause);
-        reset = (Button)findViewById(R.id.btReset);
+      //  start = (Button)findViewById(R.id.btStart);
+       // pause = (Button)findViewById(R.id.btPause);
+      //  reset = (Button)findViewById(R.id.reset);
 
-        handler = new Handler() ;
+     /*   handler = new Handler() ;
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,8 +112,10 @@ public class StopWatch extends AppCompatActivity {
                     + String.format("%03d", MilliSeconds));
 
             handler.postDelayed(this, 0);
-        }
+        }*/
 
     };
+
+
 
 }

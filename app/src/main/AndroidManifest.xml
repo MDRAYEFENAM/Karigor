@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mdrayefenam.karigorbangla">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -18,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.StopWatch"></activity>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -32,19 +33,38 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Activity.MapsActivity"
+            android:name=".Activity.Provider.ProviderOwnLocationActivity"
+            android:label="@string/title_activity_provider_own_location"></activity>
+        <activity
+            android:name=".Activity.Provider.TakerLocationActivity"
+            android:label="@string/title_activity_taker_location" />
+        <activity android:name=".Activity.Provider.ProviderAccountVerified" />
+        <activity android:name=".Activity.Provider.ProviderLoginActivity" />
+        <activity android:name=".Activity.Provider.ProviderProfile" />
+        <activity android:name=".Activity.Provider.ProviderPayment" />
+        <activity android:name=".Activity.Provider.ProviderServiceTimer" />
+        <activity android:name=".Activity.Provider.ProviderRequestAccept" />
+        <activity android:name=".Activity.Taker.TakerPayment" />
+        <activity
+            android:name=".Activity.Taker.ProviderLocationActivity"
+            android:label="@string/title_activity_provider_location" />
+        <activity android:name=".Activity.Provider.ProviderNumberAuthentication" />
+        <activity android:name=".Activity.Provider.ProviderNumberAuthenticationCode" />
+        <activity android:name=".Activity.Taker.TakerServiceTimer" />
+        <activity
+            android:name=".Activity.Taker.TakerOwnLocationActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Activity.ProviderSignUp" />
+        <activity android:name=".Activity.Provider.ProviderSignUp" />
         <activity android:name=".Activity.MainServiceSelectPage" />
-        <activity android:name=".Activity.AccountVerified" />
+        <activity android:name=".Activity.Taker.TakerAccountVerified" />
         <activity
-            android:name=".Activity.NumberAuthenticationCode"
+            android:name=".Activity.Taker.TakerNumberAuthenticationCode"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.NumberAuthentication"
+            android:name=".Activity.Taker.TakerNumberAuthentication"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.SnapScreen"
+            android:name=".Activity.SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,12 +73,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.SingUp"
+            android:name=".Activity.Taker.TakerSignUp"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.LoginActivity"
+            android:name=".Activity.Taker.TakerLoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.Taker.TakerHomePage" />
     </application>
 
 </manifest>

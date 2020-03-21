@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorMain"
-    tools:context=".Activity.ProviderSignUp">
+    tools:context=".Activity.Provider.ProviderSignUp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="30dp"
-        android:paddingBottom="30dp"
+        android:gravity="center"
         android:layout_centerInParent="true">
 
         <ImageView
@@ -24,7 +23,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:orientation="vertical"
             android:paddingLeft="30dp"
             android:paddingRight="30dp">
@@ -32,8 +30,7 @@
             <Spinner
                 android:text="@string/item"
                 android:id="@+id/spinner1"
-                app:ms_background_color="@color/colorMain"
-                android:textColor="@color/colorWhite"
+                android:background="@drawable/bg_spinner"
                 android:drawableLeft="@drawable/item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

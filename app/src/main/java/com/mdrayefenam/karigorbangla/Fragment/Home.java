@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.mdrayefenam.karigorbangla.Activity.MapsActivity;
+import com.mdrayefenam.karigorbangla.Activity.Taker.TakerOwnLocationActivity;
 import com.mdrayefenam.karigorbangla.R;
 
 /**
@@ -44,7 +44,7 @@ public class Home extends Fragment {
         aa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MapsActivity.class);
+                Intent intent = new Intent(getContext(), TakerOwnLocationActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class Home extends Fragment {
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MapsActivity.class);
+                Intent intent = new Intent(getContext(), TakerOwnLocationActivity.class);
                 startActivity(intent);
             }
         });
@@ -61,7 +61,7 @@ public class Home extends Fragment {
         ac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MapsActivity.class);
+                Intent intent = new Intent(getContext(), TakerOwnLocationActivity.class);
                 startActivity(intent);
             }
         });
@@ -69,7 +69,7 @@ public class Home extends Fragment {
         ad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MapsActivity.class);
+                Intent intent = new Intent(getContext(), TakerOwnLocationActivity.class);
                 startActivity(intent);
             }
         });
@@ -77,7 +77,7 @@ public class Home extends Fragment {
         ae.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MapsActivity.class);
+                Intent intent = new Intent(getContext(), TakerOwnLocationActivity.class);
                 startActivity(intent);
             }
         });
@@ -85,7 +85,7 @@ public class Home extends Fragment {
         af.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MapsActivity.class);
+                Intent intent = new Intent(getContext(), TakerOwnLocationActivity.class);
                 startActivity(intent);
             }
         });

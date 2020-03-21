@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:id="@+id/layoutDialogContrainer"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/layout_backgrount"
+    tools:context=".Activity.Provider.ProviderRequestAccept">
+
+<!--    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:id="@+id/layoutDialogContrainer"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        android:background="@drawable/layout_backgrount"
+        android:layout_width="match_parent"
+        android:layout_height="">-->
+
+        <LinearLayout
+
+            android:id="@+id/layoutDialog"
+            android:background="#000"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/texTitle"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="30sp"
+                android:textColor="#FFFEFE"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"
+                android:text="You Have A Service Request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/textMessage"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:layout_marginEnd="20dp"
+                android:text="Karigor Work Conferm"
+                android:layout_marginBottom="40dp"
+                android:textColor="#FFFEFE"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/btn_accept"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_background_accept"
+                android:clickable="true"
+                android:text="Accept"
+                android:textSize="15sp"
+                android:textColor="#F9FAFA"
+                android:textStyle="bold"
+                android:layout_marginRight="30dp"/>
+
+            <Button
+                android:id="@+id/btn_no"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_background_decline"
+                android:clickable="true"
+                android:text="Decline"
+                android:textSize="15sp"
+                android:textColor="#FAFDFD"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>

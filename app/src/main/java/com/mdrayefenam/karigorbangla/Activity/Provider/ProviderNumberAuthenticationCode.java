@@ -1,18 +1,17 @@
-package com.mdrayefenam.karigorbangla.Activity;
+package com.mdrayefenam.karigorbangla.Activity.Provider;
 
-import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+
+import com.mdrayefenam.karigorbangla.R;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.mdrayefenam.karigorbangla.R;
-import com.mdrayefenam.karigorbangla.R;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-public class NumberAuthenticationCode extends AppCompatActivity {
+public class ProviderNumberAuthenticationCode extends AppCompatActivity {
 
     EditText code;
     Button submit;
@@ -20,8 +19,8 @@ public class NumberAuthenticationCode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.number_authentication_code );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_provider_number_authentication_code);
 
 
         code = findViewById(R.id.code);
@@ -39,17 +38,14 @@ public class NumberAuthenticationCode extends AppCompatActivity {
                 {
                     code.setError( "Enter Your 6 digit Code" );
                 }else if(Code.equals( "123456" )){
-                    Intent intent = new Intent( NumberAuthenticationCode.this,SingUp.class );
+                    Intent intent = new Intent( ProviderNumberAuthenticationCode.this, ProviderSignUp.class );
                     intent.putExtra("number",number);
                     startActivity( intent );
                     finish();
                 }else {
-                    Toast.makeText( NumberAuthenticationCode.this, "invalid Code!", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( ProviderNumberAuthenticationCode.this, "invalid Code!", Toast.LENGTH_SHORT ).show();
                 }
             }
         } );
     }
-
-
-
 }

@@ -6,18 +6,17 @@ import android.os.Handler;
 
 import com.mdrayefenam.karigorbangla.R;
 import com.mdrayefenam.karigorbangla.SessionClass.SessionClass;
-import com.mdrayefenam.karigorbangla.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SnapScreen extends AppCompatActivity {
+public class SplashScreen extends AppCompatActivity {
 
     SessionClass sessionClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView( R.layout.snap_screen);
+        setContentView( R.layout.splash_screen);
 
         sessionClass = SessionClass.getInstance(this);
 
@@ -26,7 +25,7 @@ public class SnapScreen extends AppCompatActivity {
                 @Override
                 public void run() {
 
-                    Intent intent = new Intent(SnapScreen.this, MainActivity.class);
+                    Intent intent = new Intent(SplashScreen.this, MainServiceSelectPage.class);
                     startActivity(intent);
                     finish();
 
@@ -39,7 +38,7 @@ public class SnapScreen extends AppCompatActivity {
                 @Override
                 public void run() {
 
-                    Intent intent = new Intent(SnapScreen.this, LoginActivity.class);
+                    Intent intent = new Intent(SplashScreen.this, MainServiceSelectPage.class);
                     startActivity(intent);
                     finish();
 

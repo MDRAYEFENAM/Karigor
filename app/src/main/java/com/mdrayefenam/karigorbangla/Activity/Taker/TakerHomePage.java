@@ -1,4 +1,4 @@
-package com.mdrayefenam.karigorbangla.Activity;
+package com.mdrayefenam.karigorbangla.Activity.Taker;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,7 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class MainActivity extends AppCompatActivity {
+public class TakerHomePage extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     FrameLayout fragmentContiner;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView( R.layout.activity_main);
+        setContentView( R.layout.activity_taker_home_page);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         fragmentContiner = findViewById(R.id.fragmentContiner);
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         profile = new ProfileFragment();
         notification = new Notification();
 
-        ((AppCompatActivity) MainActivity.this).getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContiner, new Home()).commit();
+        ((AppCompatActivity) TakerHomePage.this).getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContiner, new Home()).commit();
 
 
 

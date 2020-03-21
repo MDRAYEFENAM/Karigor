@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,25 +7,65 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@color/colorMain"
-    tools:context=".Activity.MainServiceSelectPage">
+    tools:context=".Activity.MainServiceSelectPage"
+    android:orientation="vertical"
+    android:padding="40dp">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/logo"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFFFF"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp" />
 
     <Button
-        android:layout_marginBottom="10dp"
+
         android:textColor="#FFFFFF"
-        android:id="@+id/buttonGiver"
-        android:layout_width="120sp"
+        android:id="@+id/buttonProvider"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_height="wrap_content"
-        android:text="Service Giver"
+        android:text="Service Provider"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:padding="10dp"
         android:background="@drawable/btnshape" />
 
-
     <Button
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
         android:textColor="#FFFFFF"
-        android:layout_below="@+id/buttonGiver"
+        android:layout_below="@+id/buttonTaker"
         android:id="@+id/buttonTaker"
-        android:layout_width="120sp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
         android:text="Service Taker"
+        android:padding="10dp"
         android:background="@drawable/btnshape" />
 
-</RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFFFF"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+    
+
+</LinearLayout>
