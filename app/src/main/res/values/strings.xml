@@ -30,7 +30,7 @@
     <string name="garage">TV Servicing</string>
     <string name="warehouse">Washing Machine</string>
 
-    <!--ProfileFragment Fragment-->
+    <!--TakerProfileFragment Fragment-->
     <string name="user_name">Name : User Name</string>
     <string name="user_email">Email : email@email.com</string>
     <string name="user_address">Address : Bangladesh</string>
@@ -111,7 +111,6 @@
     <string name="title_activity_provider_location">Map</string>
     <string name="title_activity_taker_location">Map</string>
     <string name="title_activity_provider_own_location">Map</string>
-
 
 
     <string name="Karigor">RequestSubmit Application</string>

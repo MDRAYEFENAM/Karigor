@@ -37,6 +37,9 @@ public class ProviderProfile extends AppCompatActivity {
 
 
 
+
+
+
             /*
         findViewById(R.id.pendingwork).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,8 +117,8 @@ public class ProviderProfile extends AppCompatActivity {
 
             case R.id.menu_logout:
 
-                /*new LoginRegisterClass(ProfileFragment.this).removeEmail();
-                Intent intent = new Intent( ProfileFragment.this,loginactivity.class );
+                /*new LoginRegisterClass(TakerProfileFragment.this).removeEmail();
+                Intent intent = new Intent( TakerProfileFragment.this,loginactivity.class );
                 startActivity( intent );
                 finish();*/
 

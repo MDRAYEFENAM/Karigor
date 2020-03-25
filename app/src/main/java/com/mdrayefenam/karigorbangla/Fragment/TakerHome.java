@@ -17,12 +17,12 @@ import com.mdrayefenam.karigorbangla.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Home extends Fragment {
+public class TakerHome extends Fragment {
 
     RelativeLayout aa,ab,ac,ad,ae,af;
 
 
-    public Home() {
+    public TakerHome() {
         // Required empty public constructor
     }
 

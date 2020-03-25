@@ -7,9 +7,9 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 
-import com.mdrayefenam.karigorbangla.Fragment.Home;
-import com.mdrayefenam.karigorbangla.Fragment.ProfileFragment;
-import com.mdrayefenam.karigorbangla.Fragment.Notification;
+import com.mdrayefenam.karigorbangla.Fragment.TakerHome;
+import com.mdrayefenam.karigorbangla.Fragment.TakerProfileFragment;
+import com.mdrayefenam.karigorbangla.Fragment.TakerEditProfile;
 import com.mdrayefenam.karigorbangla.R;
 import com.mdrayefenam.karigorbangla.SessionClass.SessionClass;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,9 +25,9 @@ public class TakerHomePage extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     FrameLayout fragmentContiner;
 
-    private Home home;
-    private ProfileFragment profile;
-    private Notification notification;
+    private TakerHome home;
+    private TakerProfileFragment profile;
+    private TakerEditProfile notification;
 
     private Menu action;
 
@@ -39,11 +39,11 @@ public class TakerHomePage extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         fragmentContiner = findViewById(R.id.fragmentContiner);
 
-        home = new Home();
-        profile = new ProfileFragment();
-        notification = new Notification();
+        home = new TakerHome();
+        profile = new TakerProfileFragment();
+        notification = new TakerEditProfile();
 
-        ((AppCompatActivity) TakerHomePage.this).getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContiner, new Home()).commit();
+        ((AppCompatActivity) TakerHomePage.this).getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContiner, new TakerHome()).commit();
 
 
 
@@ -100,8 +100,8 @@ public class TakerHomePage extends AppCompatActivity {
 
             case R.id.menu_logout:
 
-                /*new LoginRegisterClass(ProfileFragment.this).removeEmail();
-                Intent intent = new Intent( ProfileFragment.this,loginactivity.class );
+                /*new LoginRegisterClass(TakerProfileFragment.this).removeEmail();
+                Intent intent = new Intent( TakerProfileFragment.this,loginactivity.class );
                 startActivity( intent );
                 finish();*/
 

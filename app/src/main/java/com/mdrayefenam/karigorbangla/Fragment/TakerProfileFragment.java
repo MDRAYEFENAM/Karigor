@@ -2,6 +2,7 @@ package com.mdrayefenam.karigorbangla.Fragment;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -18,6 +19,7 @@ import com.mdrayefenam.karigorbangla.R;
 
 
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,15 +27,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static android.content.ContentValues.TAG;
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProfileFragment extends Fragment {
+public class TakerProfileFragment extends Fragment {
 
 
-/*    public ProfileFragment() {
+/*    public TakerProfileFragment() {
         // Required empty public constructor
     }
 
@@ -47,7 +47,7 @@ public class ProfileFragment extends Fragment {
 
 }*/
 
-    String TAG="ProfileFragment ";
+    String TAG="TakerProfileFragment ";
     String name,email,mobile;
 
     private Context context;
@@ -60,7 +60,7 @@ public class ProfileFragment extends Fragment {
 
 
 
-    public ProfileFragment() {
+    public TakerProfileFragment() {
         // Required empty public constructor
     }
 
@@ -83,6 +83,20 @@ public class ProfileFragment extends Fragment {
 
 
 
+/*
+
+        Button btnTakerEditProfile = (Button) view.findViewById(R.id.btnTakerEditProfile);
+
+        btnTakerEditProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)
+            {
+                // Launching new Activity on selecting single List Item
+                Intent i = new Intent(getActivity(), TakerEditProfile.class);
+                startActivity(i);
+            }
+        });
+*/
+
         userName =(TextView)view.findViewById(R.id.userName);
         userEmail =(TextView)view.findViewById(R.id.userEmail);
         userAddress =(TextView)view.findViewById(R.id.userAddress);
@@ -90,7 +104,7 @@ public class ProfileFragment extends Fragment {
         SessionData sessionData = new SessionData();
 //        String Token = sessionData.getToken();
 
-//        Log.e("ProfileFragment Token",""+Token);
+//        Log.e("TakerProfileFragment Token",""+Token);
 
         //userName.setText( token );
 
@@ -136,6 +150,8 @@ public class ProfileFragment extends Fragment {
 
 
     }
+
+
 
     private void GetProfileData() {}
 

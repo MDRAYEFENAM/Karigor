@@ -16,7 +16,7 @@
         />
     <item
         android:id="@+id/search_item"
-        android:title="Notification"
+        android:title="Update-Pro."
         android:icon="@drawable/add"
         app:showAsAction="always"
         />
