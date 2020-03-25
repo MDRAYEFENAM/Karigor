@@ -2,7 +2,6 @@ package com.mdrayefenam.karigorbangla.Fragment;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -19,7 +18,6 @@ import com.mdrayefenam.karigorbangla.R;
 
 
 import android.util.Log;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,7 +40,7 @@ public class TakerProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate( R.layout.fragment_profile, container, false );
+        return inflater.inflate( R.layout.fragment_taker_profile, container, false );
     }
 
 }*/
@@ -79,7 +77,7 @@ public class TakerProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_taker_profile, container, false);
 
 
 

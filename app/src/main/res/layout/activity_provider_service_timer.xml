@@ -161,10 +161,10 @@
                     android:layout_gravity="left" />
 
                 <TextView
-                    android:id="@+id/userAddress"
+                    android:id="@+id/phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Address"
+                    android:text="Phone"
                     android:textColor="@color/colorWhite"
                     android:layout_gravity="left"
                     android:textSize="18sp"
